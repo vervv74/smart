@@ -1,0 +1,9 @@
+pragma solidity ^0.4.18;
+contract Level1-3{
+uint256 public a=2; //цифра, которую необходимо вывести
+    function transfer(address to, uint256 value) public constant returns (uint256) {
+        require (msg.value == value); //проверка наличия на счете определенного количества денег
+        transfer(to, value); //перевод денег
+        return a;
+    }
+}
